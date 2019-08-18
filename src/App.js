@@ -1,8 +1,12 @@
 import React from "react";
-import Header from './components/Header'
+import Header from './components/Header';
+import NavBar from './components/NavBar';
 
 const App = () => (
-  <Header />
+  <div>
+    <Header />
+    <NavBar />
+  </div>
 );
 
 export default App;

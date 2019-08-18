@@ -61,3 +61,30 @@ body {
   letter-spacing: 0.08px;
   line-height: 27px;
 }
+
+/***********/
+/* NAV BAR */
+/***********/
+
+#nav-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  list-style: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: #595959;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 21px 0 18px 0;
+  border-bottom: 3px solid #F5F5F5;
+}
+
+.nav-item-active {
+  border-bottom: 3px solid #5DAD93;
+}
