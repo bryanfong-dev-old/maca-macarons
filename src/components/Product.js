@@ -1,8 +1,11 @@
 import React from 'react';
 
-const Product = () => (
+const Product = ({ name, price, text, img }) => (
   <div>
-    <h1>Macarons</h1>
+    <p className="item-name">{name}</p>
+    <p className="item-price">{price}</p>
+    <p className="item-text">{text}</p>
+    <img src='../assets/custom gift box.png' />
   </div>
 )
 
