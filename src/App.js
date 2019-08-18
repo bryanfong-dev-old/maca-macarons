@@ -6,6 +6,9 @@ const App = () => (
   <div>
     <Header />
     <NavBar />
+    <section>
+
+    </section>
   </div>
 );
 
