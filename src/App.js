@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import MainContainer from './container/MainContainer'
 
 const App = () => (

@@ -1,7 +1,7 @@
 export const state = {
   items: {
     0: {
-      name: "Macaron Gift Box",
+      name: 'Macaron Gift Box',
       price: 55,
       text: 'This 16 piece gift box is perfect for birthdays, anniversaries or just for yourself! Customize your flavors or pick from our three gift boxes!'
     },
