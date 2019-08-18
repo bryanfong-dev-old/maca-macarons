@@ -3,6 +3,7 @@ import { state } from '../state';
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 import Product from '../components/Product';
+import Footer from '../components/Footer';
 import Images from '../Images';
 
 class MainContainer extends React.Component {
@@ -29,9 +30,10 @@ class MainContainer extends React.Component {
       <div>
         <Header />
         <NavBar />
-        <section>
+        <main>
           {items}
-        </section>
+        </main>
+        <Footer />
       </div >
     )
   }

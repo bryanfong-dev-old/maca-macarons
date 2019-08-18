@@ -1,9 +1,7 @@
 import React from 'react';
 
-
-
 const Product = ({ name, price, type, text, img }) => (
-  <div className="item-wrapper">
+  <section className="item-wrapper">
     <div className="item-photo" style={{ backgroundImage: `url('${img}')` }} />
     <div className="item-info-wrapper">
       <p className="item-name">{name}</p>
@@ -13,7 +11,7 @@ const Product = ({ name, price, type, text, img }) => (
       <p className="item-text">{text}</p>
       <button className="item-cart-button"> + Add to Cart</button>
     </div>
-  </div >
+  </section >
 )
 
 export default Product;
