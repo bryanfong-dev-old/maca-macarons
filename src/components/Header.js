@@ -1,11 +1,12 @@
 import React from 'react';
-import cartIcon from '../assets/cart_icon.svg'
+import cartIcon from '../assets/svg/cart_icon.svg';
+import Logo from '../assets/svg/logo.svg';
 
 const Header = () => (
   <header id='header'>
     <div id='header-content'>
       <div id='header-title'>
-        <span> MACA</span><span>RONS</span>
+        <img src={Logo} id='cart-icon' alt='cart-icon' />
       </div>
       <div id='cart'>
         <img src={cartIcon} id='cart-icon' alt='cart-icon' />
