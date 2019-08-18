@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+header {
+  background: #FFFFFF;
+  width: 100%;
+  border-bottom: 1px solid #F3F0EB;
+}
+
+p {
+  font-family: "phosphate-inline";
+	direction: ltr;
+  color: white;
+  font-size: 18px;
+  color: #234C3F;
+  letter-spacing: 0;
+}
+
+@media (max-width: 375px){
+}
