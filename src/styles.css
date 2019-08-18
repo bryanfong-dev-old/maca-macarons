@@ -1,20 +1,35 @@
 body {
   margin: 0;
+  max-width: 375px;
 }
 
 header {
   background: #FFFFFF;
   width: 100%;
-  border-bottom: 1px solid #F3F0EB;
+  border: 1px solid #F3F0EB;
+  height: 70px;
 }
 
-p {
+.header-title {
   font-family: "phosphate-inline";
   color: white;
+  width: 91px;
+  height: 22px;
+  margin-left: 20px;
+  margin-top: 23px;
+  margin-bottom: 25px;
+}
+
+.header-title span{
+  letter-spacing: 0;
   font-size: 18px;
   color: #234C3F;
-  letter-spacing: 0;
+}
+
+.header-title span:nth-child(2){
+  color: #5DAD93;
 }
 
 @media (max-width: 375px){
+
 }
