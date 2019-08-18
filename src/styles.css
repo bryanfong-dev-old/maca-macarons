@@ -10,6 +10,15 @@ body {
   border: 1px solid #ccc;
 }
 
+@font-face {font-family: "SoleilW01-Regular";
+  src: url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.eot");
+  src: url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.svg#SoleilW01-Regular") format("svg");
+}
+
 /**********/
 /* HEADER */
 /**********/
@@ -93,6 +102,10 @@ body {
 /* PRODUCT */
 /***********/
 
+.item-wrapper * {
+  border: .1px solid red;
+}
+
 .item-wrapper{
   margin: 20px;
   background: #FFFFFF;
@@ -122,4 +135,33 @@ body {
   color: #5DAD93;
   letter-spacing: 0;
   text-align: right;
+}
+
+.item-type {
+  font-weight: 500;
+  font-size: 14px;
+  color: #595959;
+  letter-spacing: 0.44px;
+}
+
+.item-text {
+  font-size: 12px;
+  color: #595959;
+  letter-spacing: 0.38px;
+  margin: auto 15.7px;
+}
+
+.item-cart-button {
+  font-family: "SoleilW01-Regular";
+  font-size: 13px;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  text-align: center;
+  line-height: 22.5px;
+  background: #5DAD93;
+  border-radius: 4px;
+  border-radius: 4px;
+  height: 50px;
+  width: 308.8px;
+  margin: 20px 15.7px 15 15.7px;
 }
