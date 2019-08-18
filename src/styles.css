@@ -92,3 +92,34 @@ body {
 /***********/
 /* PRODUCT */
 /***********/
+
+.item-wrapper{
+  margin: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 3px 6px 0 #E5E5E5;
+  border-radius: 4px;
+}
+
+.item-photo{
+  height: 142px;
+  background-repeat: no-repeat;
+  background-size: 335px;
+  background-position: center; 
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.item-name{
+  font-weight: 500;
+  font-size: 18px;
+  color: #5DAD93;
+  letter-spacing: 0;
+}
+
+.item-price{
+  font-weight: 600;
+  font-size: 16px;
+  color: #5DAD93;
+  letter-spacing: 0;
+  text-align: right;
+}
