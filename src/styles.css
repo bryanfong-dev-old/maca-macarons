@@ -1,8 +1,12 @@
 body {
   margin: 0 auto;
-  width: 375px;
+  min-width: 375px;
   font-family: 'Poppins', sans-serif;
   border: 1px solid #ccc;
+}
+
+#body {
+  background-color: white;
 }
 
 @font-face {font-family: "SoleilW01-Regular";
@@ -21,14 +25,16 @@ body {
 #header {
   background: #FFFFFF;
   width: 100%;
-  border-bottom: 1px solid #F3F0EB;
+
 }
 
 #header-content {
-  margin: 23px 20px 24px 20px;
+  padding: 23px;
+  margin: 0 20px 24px 20px;
   height: 23px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #F3F0EB;
 }
 
 #header-title {
@@ -107,7 +113,7 @@ body {
 .item-photo{
   height: 142px;
   background-repeat: no-repeat;
-  background-size: 335px;
+  background-size: 100%;
   background-position: center; 
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -122,7 +128,7 @@ body {
   font-size: 18px;
   color: #5DAD93;
   letter-spacing: 0;
-  width: 75%;
+  width: 60%;
   display: inline-block;
 }
 
@@ -132,7 +138,7 @@ body {
   color: #5DAD93;
   letter-spacing: 0;
   text-align: right;
-  width: 25%;
+  width: 40%;
   display: inline-block;
 }
 
@@ -245,4 +251,89 @@ footer {
 
 .subfooter-wrapper:last-child {
   margin-bottom: 0;
+}
+
+/* Mobile */
+@media only screen and (max-width: 500px) { 
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  
+  #header:after{
+    content: "Menu";
+    font-weight: 600;
+    font-size: 24px;
+    color: #595959;
+    letter-spacing: 0;
+    margin: 31px auto 21px 21px;
+    width: 69px;
+    height: 33px;
+  }
+
+  #main{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 20px;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 50% 25% 25%;
+    height: 205px;
+  }
+
+  #footer-text p{
+    display: none;
+  }
+
+  #footer-text:after{
+    content: 'We are committed to serving the freshest, most delightful treats.'
+  }
+
+  .subfooter-header{
+    color: #5DAD93;
+  }
+
+  #social-media-links{
+    grid-column-start: 1;
+    grid-column-end:2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #copyright-div {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  #copyright-logo {
+    padding: 0;
+  }
+
+  #company-div{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 0;
+    grid-row-end: 2;
+  }
+
+  #online-order-div{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 0;
+    grid-row-end: 2;
+  }
+
+}
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #B2D6FF; /* Blue */
+  }
 }

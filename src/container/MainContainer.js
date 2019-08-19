@@ -1,7 +1,6 @@
 import React from "react";
 import { state } from '../state';
 import Header from '../components/Header';
-import NavBar from '../components/NavBar';
 import Product from '../components/Product';
 import Footer from '../components/Footer';
 import Images from '../Images';
@@ -27,12 +26,9 @@ class MainContainer extends React.Component {
     }
 
     return (
-      <div>
+      <div id="body">
         <Header />
-        <NavBar />
-        <main>
-          {items}
-        </main>
+        <main id="main"> {items} </main>
         <Footer />
       </div >
     )
