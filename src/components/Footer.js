@@ -13,6 +13,18 @@ const Footer = () => (
       <img src={Instagram} id='instagram-icon' alt='instagram-icon' />
       <img src={Twitter} id='twitter-icon' alt='twitter-icon' />
     </div>
+    <div className='subfooter-wrapper'>
+      <h4 className='subfooter-header'>Company</h4>
+      <p className="subfooter-links">About</p>
+      <p className="subfooter-links">Location</p>
+      <p className="subfooter-links">Contact Us</p>
+    </div>
+    <div className='subfooter-wrapper'>
+      <h4 className='subfooter-header'> Online Orders</h4>
+    </div>
+    <div className='subfooter-wrapper'>
+      <h4 id="copyright-logo">© 2019 MACARONS</h4>
+    </div>
   </footer >
 )
 
