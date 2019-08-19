@@ -28,6 +28,7 @@ class MainContainer extends React.Component {
     return (
       <div id="body">
         <Header />
+        <h4 id="current-page"></h4>
         <main id="main"> {items} </main>
         <Footer />
       </div >

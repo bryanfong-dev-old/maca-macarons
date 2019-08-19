@@ -28,7 +28,6 @@ body {
 
 #header-content {
   padding: 23px;
-  margin: 0 20px 24px 20px;
   height: 23px;
   display: flex;
   align-items: center;
@@ -86,6 +85,10 @@ body {
 
 .nav-item-active {
   border-bottom: 3px solid #5DAD93;
+}
+
+#current-page{
+  margin: 0;
 }
 
 /***********/
@@ -244,25 +247,38 @@ footer {
   margin-bottom: 0;
 }
 
-/* Mobile */
-@media only screen and (max-width: 450px) { 
-
-}
-
-@media only screen and (min-width: 541px) and (max-width: 960px) {
-  #header{
-    border-bottom: 1px solid #F3F0EB;
+/* Tablet */
+@media only screen and (min-width: 480px){
+  #main{
+    display:grid;
+    grid-template-columns: 50% 50%;
   }
 
-  #header-content{
-    margin-bottom: 0;
+  /********************/
+  /* HEADER - TABLET */
+  /********************/
+
+  #current-page:after{
+    content: "Menu";
+    font-weight: 600;
+    font-size: 24px;
+    color: #595959;
+    letter-spacing: 0;
+    width: 69px;
+    height: 33px;
+    margin-left: 20px;
+  }
+
+  #header{
+    border-bottom: 1px solid #F3F0EB;
+    margin-bottom: 20px;
   }
 
   #nav-bar{
     width: 195px;
     position: absolute;
     top: 5;
-    right: 124;
+    right: 104;
   }
 
   #cart {
@@ -292,36 +308,6 @@ footer {
     letter-spacing: -0.25px;
     line-height: 19px;
   }
-}
-
-
-/* Tablet */
-@media only screen and (min-width: 506px) and (max-width: 960px) {
-  
-  /* #header:after{
-    content: "Menu";
-    font-weight: 600;
-    font-size: 24px;
-    color: #595959;
-    letter-spacing: 0;
-    margin: 31px auto 21px 21px;
-    width: 69px;
-    height: 33px;
-  } */
-
-  #main{
-    display:grid;
-    grid-template-columns: 50% 50%;
-    margin-top: 20px;
-  }
-
-  
-
-
-  /********************/
-  /* PRODUCT - TABLET */
-  /********************/
-
 
   /*******************/
   /* FOOTER - TABLET */
