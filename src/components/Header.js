@@ -5,12 +5,10 @@ import NavBar from './NavBar';
 
 const Header = () => (
   <header id='header'>
-    <div id='header-content'>
-      <Logo />
-      <ShoppingCart />
-      <NavBar />
-    </div>
-  </header >
+    <Logo />
+    <ShoppingCart />
+    <NavBar />
+  </header>
 )
 
 export default Header;
