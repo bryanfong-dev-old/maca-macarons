@@ -118,6 +118,7 @@ body {
   grid-row: 1 / 2; 
   grid-column: 1 / 3;
 }
+
 .item-name{
   font-weight: 500;
   font-size: 18px;
@@ -125,7 +126,6 @@ body {
   letter-spacing: 0;
   margin-left: 15.7px;
   grid-row: 2 / 3;
-  
 }
 
 .item-price{
@@ -180,7 +180,6 @@ body {
   margin-bottom: 15px;
   grid-row: 5 / 6;
   grid-column: 1 / 3;
-
 }
 
 /**********/
@@ -307,6 +306,7 @@ footer {
   #current-page {
     border-top: 1px solid #F5F5F5;
     padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   #current-page:after{
@@ -387,26 +387,95 @@ footer {
 }
 
 /* Desktop */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1025px) {
+
+  .item-wrapper * {
+    /* border: 1px solid red; */
+  }
+
   body {
     max-width : 1024px;
   }
 
   #main {
     grid-template-columns: 100%;
-    grid-template-rows: repeat(3 , 33%);
   }
 
   .item-wrapper{
     display: grid;
     grid-template-columns: 220px 1fr 220px;
+    grid-template-rows: 30px 30px 1fr;
+    grid-column-gap: 20px;
+    height: 180px;
+    margin: 1px 20px;
+    box-shadow: none;
+    border-bottom: 1px solid #F3F0EB;
+  }
+
+  .item-wrapper:last-child {
+    border-bottom: none;
   }
 
   .item-photo {
     border-radius: 4px;
+    grid-column: 1 / 2;
+    grid-row: 1/5;
+    height: 160px;
+    margin: 10px 0;
+  }
+
+  .item-name {
+    margin-top: 12px;
+    grid-column: 2/ 3;
+    grid-row: 1 /2;
+  }
+
+  .item-type {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; 
+    height: 30px;
+  }
+
+  .item-text {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  .item-price {
+    font-weight: 600;
+    font-size: 20px;
+    color: #595959;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0 auto;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    z-index: 1;
+    margin: 33px 17px auto 28px;
+  }
+
+  .bulk:after {
+    content: "/ea";
+  }
+
+  .cart-price-wrapper {
+    content: '';
+    background: #FAF9F7;
+    border-radius: 4px;
+    border-radius: 4px;
+    height: 160px;
+    width: 220px;
+    grid-column: 3 / 4; 
+    grid-row: 1 / 4;
+    margin-top: 11px;
+    margin-bottom: 9px;
   }
 
   .add-cart-button {
     grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    margin: auto 17px 31px 28px;
   }
 }
