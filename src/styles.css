@@ -15,8 +15,7 @@ body {
   url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.woff2") format("woff2"),
   url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.woff") format("woff"),
   url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.ttf") format("truetype"),
-  url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.svg#SoleilW01-Regular") format("svg");
-}
+  url("//db.onlinewebfonts.com/t/4ff6a11cffa6e8559bd96d4fc1cfa275.svg#SoleilW01-Regular") format("svg");}
 
 /**********/
 /* HEADER */
@@ -25,7 +24,6 @@ body {
 #header {
   background: #FFFFFF;
   width: 100%;
-
 }
 
 #header-content {
@@ -37,24 +35,14 @@ body {
   border-bottom: 1px solid #F3F0EB;
 }
 
-#header-title {
-  font-family: 'phosphate-inline';
-  color: white;
-}
-
-#header-title span{
-  letter-spacing: 0;
-  font-size: 18px;
-  color: #234C3F;
-}
-
-#header-title span:nth-child(2){
-  color: #5DAD93;
+#maca-logo{
+  cursor: pointer;
 }
 
 #cart {
   display: flex;
   margin-left: auto;
+  cursor: pointer;
 }
 
 #cart-icon {
@@ -93,6 +81,7 @@ body {
   text-align: center;
   padding: 21px 0 18px 0;
   border-bottom: 3px solid #F5F5F5;
+  cursor: pointer;
 }
 
 .nav-item-active {
@@ -159,10 +148,10 @@ body {
   font-size: 12px;
   color: #595959;
   letter-spacing: 0.38px;
-  margin: 0 0 20px 0 ;
+  margin: 0 0 20px 0;
 }
 
-.item-cart-button {
+.add-cart-button {
   font-family: "SoleilW01-Regular";
   font-size: 13px;
   color: #FFFFFF;
@@ -175,6 +164,7 @@ body {
   height: 50px;
   width: 100%;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 /**********/
@@ -210,6 +200,7 @@ footer {
 
 #social-media-links img {
   margin-right: 15px;
+  cursor: pointer;
 }
 
 .subfooter-wrapper {
@@ -236,6 +227,7 @@ footer {
   line-height: 24px;
   margin-top: 10px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 #copyright-logo {
@@ -248,20 +240,65 @@ footer {
   padding-bottom: 30px;
 }
 
-
 .subfooter-wrapper:last-child {
   margin-bottom: 0;
 }
 
 /* Mobile */
-@media only screen and (max-width: 500px) { 
+@media only screen and (max-width: 450px) { 
 
 }
 
+@media only screen and (min-width: 541px) and (max-width: 960px) {
+  #header{
+    border-bottom: 1px solid #F3F0EB;
+  }
+
+  #header-content{
+    margin-bottom: 0;
+  }
+
+  #nav-bar{
+    width: 195px;
+    position: absolute;
+    top: 5;
+    right: 124;
+  }
+
+  #cart {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #cart:before {
+    content: "|";
+    color: #595959;
+    margin-right: 19.3px;
+    width: 3px;
+    cursor: default;
+  }
+
+  .nav-item, #header-content {
+    border-bottom: none;
+  }
+
+  .nav-item{
+    font-size: 12px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #595959;
+    letter-spacing: -0.25px;
+    line-height: 19px;
+  }
+}
+
+
 /* Tablet */
-@media only screen and (min-width: 501px) and (max-width: 960px) {
+@media only screen and (min-width: 506px) and (max-width: 960px) {
   
-  #header:after{
+  /* #header:after{
     content: "Menu";
     font-weight: 600;
     font-size: 24px;
@@ -270,13 +307,25 @@ footer {
     margin: 31px auto 21px 21px;
     width: 69px;
     height: 33px;
-  }
+  } */
 
   #main{
     display:grid;
     grid-template-columns: 50% 50%;
     margin-top: 20px;
   }
+
+  
+
+
+  /********************/
+  /* PRODUCT - TABLET */
+  /********************/
+
+
+  /*******************/
+  /* FOOTER - TABLET */
+  /*******************/
 
   footer {
     display: grid;

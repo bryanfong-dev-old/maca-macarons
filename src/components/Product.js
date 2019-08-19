@@ -9,7 +9,7 @@ const Product = ({ name, price, type, text, img }) => (
       {type == '1 piece' && <p className="item-price">${price}/ea.</p>}
       <p className="item-type">{type}</p>
       <p className="item-text">{text}</p>
-      <button className="item-cart-button"> + Add to Cart</button>
+      <button className="add-cart-button"> + Add to Cart</button>
     </div>
   </section >
 )
