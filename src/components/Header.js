@@ -8,8 +8,8 @@ const Header = () => (
     <div id='header-content'>
       <Logo />
       <ShoppingCart />
+      <NavBar />
     </div>
-    <NavBar />
   </header >
 )
 

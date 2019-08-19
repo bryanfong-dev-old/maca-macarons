@@ -2,7 +2,6 @@ body {
   margin: 0 auto;
   min-width: 375px;
   font-family: 'Poppins', sans-serif;
-  border: 1px solid #ccc;
 }
 
 #body {
@@ -27,20 +26,22 @@ body {
 }
 
 #header-content {
-  padding: 23px;
-  height: 23px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F3F0EB;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 70px 61px;
 }
 
 #maca-logo{
   cursor: pointer;
+  margin-left: 20px;
 }
 
 #cart {
   display: flex;
   margin-left: auto;
+  margin-right: 20px;
   cursor: pointer;
 }
 
@@ -68,6 +69,8 @@ body {
   grid-template-columns: repeat(3, 33%);
   margin: 0;
   padding: 0;
+  grid-column: 1 / 3;
+  border-top: 1px solid #F3F0EB;
 }
 
 .nav-item {
@@ -249,51 +252,25 @@ footer {
 
 /* Tablet */
 @media only screen and (min-width: 480px){
-  #main{
-    display:grid;
-    grid-template-columns: 50% 50%;
-  }
 
   /********************/
   /* HEADER - TABLET */
   /********************/
-
-  #current-page:after{
-    content: "Menu";
-    font-weight: 600;
-    font-size: 24px;
-    color: #595959;
-    letter-spacing: 0;
-    width: 69px;
-    height: 33px;
-    margin-left: 20px;
-  }
 
   #header{
     border-bottom: 1px solid #F3F0EB;
     margin-bottom: 20px;
   }
 
-  #nav-bar{
-    width: 195px;
-    position: absolute;
-    top: 5;
-    right: 104;
+  #header-content {
+    grid-template-columns: 1fr 200px auto;
+    grid-template-rows: 70px;
   }
 
-  #cart {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-  }
-
-  #cart:before {
-    content: "|";
-    color: #595959;
-    margin-right: 19.3px;
-    width: 3px;
-    cursor: default;
+  #nav-bar {
+    grid-column : 2/ 3;
+    grid-row: 1 / 2;
+    border-top: none;
   }
 
   .nav-item, #header-content {
@@ -307,6 +284,39 @@ footer {
     color: #595959;
     letter-spacing: -0.25px;
     line-height: 19px;
+  }
+
+  #cart{
+    grid-column: 3/ 4;
+    margin-left: 0;
+  }
+
+  #cart:before {
+    content: "|";
+    color: #595959;
+    margin-right: 19.3px;
+    width: 3px;
+    cursor: default;
+  }
+
+  #current-page:after{
+    content: "Menu";
+    font-weight: 600;
+    font-size: 24px;
+    color: #595959;
+    letter-spacing: 0;
+    width: 69px;
+    height: 33px;
+    margin-left: 20px;
+  }
+
+  /*******************/
+  /* PRODUCT - TABLET */
+  /*******************/
+
+  #main{
+    display:grid;
+    grid-template-columns: 50% 50%;
   }
 
   /*******************/
@@ -369,6 +379,6 @@ footer {
 /* Desktop */
 @media only screen and (min-width: 961px) {
   body {
-    background-color: #B2D6FF; /* Blue */
+    max-width : 1024px;
   }
 }
