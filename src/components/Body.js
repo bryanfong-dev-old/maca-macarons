@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Body = ({ items }) => (
+const Body = ({ products }) => (
   <div>
     <h4 id="current-page"></h4>
-    <main id="main"> {items} </main>
+    <main id="main"> {products} </main>
   </div>
 
 )

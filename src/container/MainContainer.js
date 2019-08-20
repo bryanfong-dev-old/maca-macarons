@@ -15,10 +15,11 @@ class MainContainer extends React.Component {
   }
 
   render() {
-    const items = [];
+    const { cart, items } = this.state;
+    const products = [];
     for (let i = 0; i < this.state.items.length; i++) {
       const { name, price, type, text } = this.state.items[i]
-      items.push(<Product
+      products.push(<Product
         key={i}
         name={name}
         price={price}
@@ -31,9 +32,9 @@ class MainContainer extends React.Component {
     return (
       <div>
         <Header />
-        <Body items={items} />
+        <Body products={products} />
         <Footer />
-        <CartContainer images={Images} cart={this.state.cart} items={this.state.items} />
+        <CartContainer images={Images} cart={cart} items={items} />
       </div >
     )
   }
