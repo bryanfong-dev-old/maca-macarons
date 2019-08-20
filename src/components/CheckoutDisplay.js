@@ -1,9 +1,8 @@
 import React from 'react';
 
 
-const CheckoutDisplay = ({ item, image, quantity, removeFromCart, i }) => (
+const CheckoutDisplay = ({ item, image, quantity, removeFromCart, i, cartView }) => (
   <section>
-    <div id="page-wrapper"></div>
     <div className="checkout-item-wrapper">
       <h4 className="checkout-item-name">{item.name}</h4>
       {item.type == 'Assorted Flavors' && <h4 className="checkout-item-type">{quantity}x {item.type}</h4>}

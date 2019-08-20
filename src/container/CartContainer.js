@@ -3,7 +3,7 @@ import CheckoutDisplay from '../components/CheckoutDisplay'
 
 class CartContainer extends React.Component {
   render() {
-    const { images, cart, items, closeCart, removeFromCart } = this.props;
+    const { images, cart, items, closeCart, removeFromCart, clicked } = this.props;
     let sum = 0;
     const checkoutItems = [];
     for (let key in cart) {
@@ -16,7 +16,7 @@ class CartContainer extends React.Component {
     }
 
     return (
-      <section id="cart-slider" >
+      <section id="cart-slider" className={clicked}>
         <button id="cart-close-button" onClick={() => closeCart()}> Close </button>
         <h4 id="my-cart-label">My Cart</h4>
         {checkoutItems}

@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import { state } from '../state';
 import Header from '../components/Header';
 import Body from '../components/Body';
@@ -66,7 +67,10 @@ class MainContainer extends React.Component {
         <Body products={products} />
         <Footer />
         {cartView && <CartContainer
-          images={Images} cart={cart} items={items}
+          images={Images} cart={cart} items={items} clicked="cart-slider-clicked"
+          removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
+        {!cartView && <CartContainer
+          images={Images} cart={cart} items={items} clicked="cart-slider-closed"
           removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
       </div >
     )
