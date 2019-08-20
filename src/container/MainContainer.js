@@ -13,11 +13,29 @@ class MainContainer extends React.Component {
     super(props);
     this.state = state;
     this.openCart = this.openCart.bind(this);
+    this.closeCart = this.closeCart.bind(this);
+    this.addToCart = this.addToCart.bind(this);
+    this.removeFromCart = this.removeFromCart.bind(this);
   }
 
   openCart() {
-    console.log('invoked openCart')
     this.setState({ cartView: true })
+  }
+
+  closeCart() {
+    this.setState({ cartView: false })
+  }
+
+  addToCart(key) {
+    const newState = JSON.parse(JSON.stringify(this.state));
+    newState.cart[key] += 1;
+    this.setState(newState);
+  }
+
+  removeFromCart(key) {
+    const newState = JSON.parse(JSON.stringify(this.state));
+    newState.cart[key] -= 1;
+    this.setState(newState);
   }
 
 
@@ -28,11 +46,13 @@ class MainContainer extends React.Component {
       const { name, price, type, text } = this.state.items[i]
       products.push(<Product
         key={i}
+        i={i}
         name={name}
         price={price}
         type={type}
         text={text}
         img={Images[i]}
+        addToCart={this.addToCart}
       />);
     }
 
@@ -41,7 +61,9 @@ class MainContainer extends React.Component {
         <Header openCart={this.openCart} />
         <Body products={products} />
         <Footer />
-        {cartView && <CartContainer images={Images} cart={cart} items={items} />}
+        {cartView && <CartContainer
+          images={Images} cart={cart} items={items}
+          removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
       </div >
     )
   }

@@ -3,19 +3,21 @@ import CheckoutDisplay from '../components/CheckoutDisplay'
 
 class CartContainer extends React.Component {
   render() {
+    const { images, cart, items, closeCart, removeFromCart } = this.props;
     let sum = 0;
-    const { images, cart, items } = this.props;
     const checkoutItems = [];
     for (let key in cart) {
       if (cart[key] > 0) {
-        checkoutItems.push(<CheckoutDisplay key={key} quantity={cart[key]} item={items[key]} image={images[key]} />);
+        checkoutItems.push(<CheckoutDisplay i={key} key={key}
+          quantity={cart[key]} item={items[key]} image={images[key]}
+          removeFromCart={removeFromCart} />);
         sum += cart[key] * items[key].price;
       }
     }
 
     return (
       <section id="cart-slider" >
-        <button id="cart-close-button"> Close </button>
+        <button id="cart-close-button" onClick={() => closeCart()}> Close </button>
         <h4 id="my-cart-label">My Cart</h4>
         {checkoutItems}
         <div id="cart-total">
