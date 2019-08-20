@@ -19,7 +19,8 @@ class MainContainer extends React.Component {
   }
 
   openCart() {
-    this.setState({ cartView: true })
+    const bool = !this.state.cartView
+    this.setState({ cartView: bool })
   }
 
   closeCart() {
@@ -62,6 +63,7 @@ class MainContainer extends React.Component {
 
     return (
       <div>
+        {cartView && <div id="page-wrapper" />}
         <Header openCart={this.openCart} cartCount={cartCount} />
         <Body products={products} />
         <Footer />
