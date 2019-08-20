@@ -87,11 +87,6 @@ body {
   z-index: 0;
 }
 
-.nav-item-active, .nav-item:hover {
-  border-bottom: 3px solid #5DAD93;
-}
-
-
 #current-page{
   margin: 0;
 }
@@ -267,6 +262,37 @@ footer {
 
 .subfooter-wrapper:last-child {
   margin-bottom: 0;
+}
+
+/****************/
+/* CART SLIDER */
+/***************/
+
+#cart-slider {
+  width: 362px;
+  height: 100vh;
+  background: #FFFFFF;
+  box-shadow: 0 0 16px 0 rgba(0,0,0,0.10);
+  border-radius: 2px;
+  z-index : 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.checkout-item-image {
+  height: 58px;
+  width: 80px;
+  border-radius: 2px;
+}
+
+
+@media only screen and (max-width: 479px){
+
+  .nav-item-active, .nav-item:hover {
+    border-bottom: 3px solid #5DAD93;
+  }
+
 }
 
 /***********************/

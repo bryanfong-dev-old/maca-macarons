@@ -1,9 +1,12 @@
 import React from "react";
 import { state } from '../state';
 import Header from '../components/Header';
+import Body from '../components/Body';
 import Product from '../components/Product';
 import Footer from '../components/Footer';
+import CartContainer from './CartContainer';
 import Images from '../Images';
+
 
 class MainContainer extends React.Component {
   constructor(props) {
@@ -26,11 +29,11 @@ class MainContainer extends React.Component {
     }
 
     return (
-      <div id="body">
+      <div>
         <Header />
-        <h4 id="current-page"></h4>
-        <main id="main"> {items} </main>
+        <Body items={items} />
         <Footer />
+        <CartContainer images={Images} cart={this.state.cart} items={this.state.items} />
       </div >
     )
   }

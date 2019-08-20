@@ -19,4 +19,7 @@ export const state = {
       text: 'Our most romantic flavor! Filled with the lighest, sweetest rose ganache, this macaron will definitely be a pleasant surprise.',
     }
   ],
+  cart: {
+    0: 1
+  }
 }
