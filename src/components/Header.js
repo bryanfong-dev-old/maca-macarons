@@ -3,10 +3,10 @@ import Logo from './Logo';
 import ShoppingCart from './ShoppingCart'
 import NavBar from './NavBar';
 
-const Header = () => (
+const Header = ({ openCart }) => (
   <header id='header'>
     <Logo />
-    <ShoppingCart />
+    <ShoppingCart openCart={openCart} />
     <NavBar />
   </header>
 )

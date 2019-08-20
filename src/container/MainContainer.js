@@ -12,10 +12,17 @@ class MainContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = state;
+    this.openCart = this.openCart.bind(this);
   }
 
+  openCart() {
+    console.log('invoked openCart')
+    this.setState({ cartView: true })
+  }
+
+
   render() {
-    const { cart, items } = this.state;
+    const { cart, items, cartView } = this.state;
     const products = [];
     for (let i = 0; i < this.state.items.length; i++) {
       const { name, price, type, text } = this.state.items[i]
@@ -31,10 +38,10 @@ class MainContainer extends React.Component {
 
     return (
       <div>
-        <Header />
+        <Header openCart={this.openCart} />
         <Body products={products} />
         <Footer />
-        <CartContainer images={Images} cart={cart} items={items} />
+        {cartView && <CartContainer images={Images} cart={cart} items={items} />}
       </div >
     )
   }

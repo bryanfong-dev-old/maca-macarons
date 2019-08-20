@@ -24,5 +24,5 @@ export const state = {
     1: 2,
     2: 0,
   },
-  checkoutOpen: true,
+  cartView: false,
 }
