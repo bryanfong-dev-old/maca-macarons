@@ -20,11 +20,12 @@ class MainContainer extends React.Component {
   }
 
   openCart() {
-    this.setState({ cartView: !this.state.cartView })
+    if (this.state.cartView == 'open') this.setState({ cartView: 'close' })
+    else this.setState({ cartView: 'open' })
   }
 
   closeCart() {
-    this.setState({ cartView: false })
+    this.setState({ cartView: 'close' })
   }
 
   addToCart(key) {
@@ -62,15 +63,15 @@ class MainContainer extends React.Component {
 
     return (
       <div>
-        {cartView && <div id="page-wrapper" />}
+        {cartView == 'open' && <div id="page-wrapper" />}
         <Header openCart={this.openCart} cartCount={cartCount} />
         <Body products={products} />
         <Footer />
-        {cartView && <CartContainer
-          images={Images} cart={cart} items={items} status="cart-slider-clicked"
+        {cartView == 'open' && <CartContainer
+          images={Images} cart={cart} items={items} status="cart-slider-open"
           removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
-        {!cartView && <CartContainer
-          images={Images} cart={cart} items={items} status="cart-slider-closed"
+        {!cartView == 'close' && <CartContainer
+          images={Images} cart={cart} items={items} status="cart-slider-close"
           removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
       </div >
     )

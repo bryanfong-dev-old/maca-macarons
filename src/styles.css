@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0 auto;
   min-width: 375px;
@@ -92,9 +90,9 @@ button:focus {
   opacity: 0;
 }
 
-/***********/
+/***************************************************************************************************************************/
 /* NAV BAR */
-/***********/
+/***************************************************************************************************************************/
 
 #nav-bar {
   display: grid;
@@ -117,6 +115,14 @@ button:focus {
   border-bottom: 3px solid #F5F5F5;
   cursor: pointer;
   z-index: 0;
+}
+
+
+.nav-item-active:after{
+  background-color: #5DAD93;
+  height: 100px;
+  width: 33%;
+  z-index: 5;
 }
 
 #current-page{
@@ -320,7 +326,7 @@ footer {
   z-index: 4;
 }
 
-.cart-slider-closed {
+.cart-slider-close {
   right: 0;
   -webkit-animation: slideClose 0.5s forwards;
   animation: slideClose 0.5s forwards;
@@ -334,7 +340,7 @@ footer {
   100% { right: -362; }
 }
 
-.cart-slider-clicked {
+.cart-slider-open {
   right: -362;
   -webkit-animation: slideOpen 0.5s forwards;
   animation: slideOpen 0.5s forwards;
@@ -484,9 +490,9 @@ footer {
 /***************************************************************************************************************************/
 /***************************************************************************************************************************/
 
-@media only screen and (max-width: 479px){
+@media only screen and (min-width: 480px){
   .nav-item-active, .nav-item:hover {
-    border-bottom: 3px solid #5DAD93;
+    border: none;
   }
 }
 
