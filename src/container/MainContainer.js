@@ -67,10 +67,10 @@ class MainContainer extends React.Component {
         <Body products={products} />
         <Footer />
         {cartView && <CartContainer
-          images={Images} cart={cart} items={items} clicked="cart-slider-clicked"
+          images={Images} cart={cart} items={items} status="cart-slider-clicked"
           removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
         {!cartView && <CartContainer
-          images={Images} cart={cart} items={items} clicked="cart-slider-closed"
+          images={Images} cart={cart} items={items} status="cart-slider-closed"
           removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
       </div >
     )
