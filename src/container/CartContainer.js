@@ -6,7 +6,9 @@ class CartContainer extends React.Component {
     const { images, cart, items } = this.props;
     const checkoutItems = [];
     for (let key in cart) {
-      checkoutItems.push(<CheckoutDisplay item={items[key]} image={images[key]} />)
+      if (cart[key] > 0) {
+        checkoutItems.push(<CheckoutDisplay quantity={cart[key]} item={items[key]} image={images[key]} />)
+      }
     }
 
     return (
