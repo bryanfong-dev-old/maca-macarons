@@ -276,7 +276,8 @@ footer {
 }
 
 #cart-slider {
-  width: 362px;
+  padding: 30px;
+  width: 302px;
   height: 100vh;
   background: #FFFFFF;
   box-shadow: 0 0 16px 0 rgba(0,0,0,0.10);
@@ -303,35 +304,61 @@ footer {
   outline: none;
 }
 
-.checkout-item-image {
-  height: 58px;
-  width: 80px;
-  border-radius: 2px;
-}
 
 #my-cart-label{
   font-weight: 600;
   font-size: 24px;
   color: #595959;
   letter-spacing: 0;
+  margin-bottom: 29px;
+  margin-top: 34px;
+}
+
+.checkout-item-wrapper * {
+  margin: 0;
+}
+
+.checkout-item-wrapper{
+  display:grid;
+  height: 87px;
+  grid-template-columns: 80px 180px 42px;
+  grid-template-rows: 23px 25px 13px;
+  margin-bottom: 29px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.checkout-item-photo{
+  margin-top: 3px;
+  height: 58px;
+  width: 80px;
+  border-radius: 2px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 
 .checkout-item-name{
+  margin-left: 16px;
   font-weight: 500;
   font-size: 16px;
   color: #5DAD93;
   letter-spacing: 0;
+  grid-column: 2 / 3 ;
+  grid-row: 1 / 2;
 }
 
 .checkout-item-type{
+  margin-left: 16px;
   font-weight: 500;
   font-size: 12px;
   color: #000000;
   letter-spacing: 0;
   line-height: 25px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
 .checkout-remove-button{
+  margin-left: 16px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   border: none;
@@ -339,14 +366,32 @@ footer {
   color: #999999;
   letter-spacing: 0;
   text-decoration: underline;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  text-align: left;
+  padding: 0;
 }
 
-.cart-total-text, .cart-total-sum{
+.checkout-item-price{
+  font-weight: 600;
+  font-size: 12px;
+  color: #595959;
+  letter-spacing: 0;
+  text-align: center;
+  grid-column: 3 / 4;
+  grid-row : 1 / 2;
+}
+
+#cart-total-text, #cart-total-sum{
   font-weight: 600;
   font-size: 16px;
   color: #595959;
   letter-spacing: 0;
   text-align: center;
+}
+
+#cart-total{
+  display:flex;
 }
 
 #checkout-button{
@@ -369,11 +414,9 @@ footer {
 
 
 @media only screen and (max-width: 479px){
-
   .nav-item-active, .nav-item:hover {
     border-bottom: 3px solid #5DAD93;
   }
-
 }
 
 /***********************/

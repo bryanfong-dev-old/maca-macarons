@@ -6,7 +6,7 @@ const CheckoutDisplay = ({ item, image }) => (
     <h4 className="checkout-item-name">{item.name}</h4>
     <h4 className="checkout-item-type">{item.type}</h4>
     <h4 className="checkout-item-price">${item.price}.00</h4>
-    <img className="checkout-item-image" src={image} />
+    <img className="checkout-item-photo" src={image} />
     <button className="checkout-remove-button">Remove</button>
   </div>
 )

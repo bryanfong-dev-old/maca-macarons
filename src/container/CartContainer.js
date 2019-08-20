@@ -14,8 +14,10 @@ class CartContainer extends React.Component {
         <button id="cart-close-button"> Close </button>
         <h4 id="my-cart-label">My Cart</h4>
         {checkoutItems}
-        <p id="cart-total-text">Total</p>
-        <p id="cart-total-sum">$55.00</p>
+        <div id="cart-total">
+          <p id="cart-total-text">Total</p>
+          <p id="cart-total-sum">$55.00</p>
+        </div>
         <button id="checkout-button">Continue to Checkout</button>
       </section >
     )
