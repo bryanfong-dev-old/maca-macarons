@@ -19,8 +19,7 @@ class MainContainer extends React.Component {
   }
 
   openCart() {
-    const bool = !this.state.cartView
-    this.setState({ cartView: bool })
+    this.setState({ cartView: !this.state.cartView })
   }
 
   closeCart() {
@@ -42,7 +41,6 @@ class MainContainer extends React.Component {
       this.setState(newState);
     }
   }
-
 
   render() {
     const { cart, items, cartView, cartCount } = this.state;
