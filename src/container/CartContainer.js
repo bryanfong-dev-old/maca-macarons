@@ -15,7 +15,7 @@ class CartContainer extends React.Component {
         <h4 id="my-cart-label">My Cart</h4>
         {checkoutItems}
         <p id="cart-total-text">Total</p>
-        <p id="cart-total-sum">  $55</p>
+        <p id="cart-total-sum">$55.00</p>
         <button id="checkout-button">Continue to Checkout</button>
       </section >
     )
