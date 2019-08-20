@@ -20,9 +20,10 @@ export const state = {
     }
   ],
   cart: {
-    0: 2,
-    1: 2,
+    0: 0,
+    1: 0,
     2: 0,
   },
   cartView: false,
+  cartCount: 0,
 }

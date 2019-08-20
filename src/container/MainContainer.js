@@ -29,18 +29,22 @@ class MainContainer extends React.Component {
   addToCart(key) {
     const newState = JSON.parse(JSON.stringify(this.state));
     newState.cart[key] += 1;
+    newState.cartCount += 1;
     this.setState(newState);
   }
 
   removeFromCart(key) {
-    const newState = JSON.parse(JSON.stringify(this.state));
-    newState.cart[key] -= 1;
-    this.setState(newState);
+    if (this.state.cart[key] > 0) {
+      const newState = JSON.parse(JSON.stringify(this.state));
+      newState.cart[key] -= 1;
+      newState.cartCount -= 1;
+      this.setState(newState);
+    }
   }
 
 
   render() {
-    const { cart, items, cartView } = this.state;
+    const { cart, items, cartView, cartCount } = this.state;
     const products = [];
     for (let i = 0; i < this.state.items.length; i++) {
       const { name, price, type, text } = this.state.items[i]
@@ -58,7 +62,7 @@ class MainContainer extends React.Component {
 
     return (
       <div>
-        <Header openCart={this.openCart} />
+        <Header openCart={this.openCart} cartCount={cartCount} />
         <Body products={products} />
         <Footer />
         {cartView && <CartContainer
