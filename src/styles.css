@@ -8,6 +8,10 @@ button {
   cursor: pointer;
 }
 
+button:focus {
+  outline: none;
+}
+
 #body {
   background-color: white;
 }
@@ -185,9 +189,6 @@ button {
   background: #3B8873;
 }
 
-.add-cart-button:focus{
-  outline: none
-}
 
 
 /**********/
@@ -271,12 +272,9 @@ footer {
 /* CART SLIDER */
 /***************/
 
-#cart-slider * {
-  /* border: 1px solid red; */
-}
-
 #cart-slider {
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   width: 302px;
   height: 100vh;
   background: #FFFFFF;
@@ -296,14 +294,9 @@ footer {
   letter-spacing: 0;
   text-align: center;
   margin-top: 28px;
-  margin-right: 30px;
+  margin-left: 256px;
   border: none;
 }
-
-#cart-close-button:focus{
-  outline: none;
-}
-
 
 #my-cart-label{
   font-weight: 600;
@@ -350,7 +343,7 @@ footer {
   margin-left: 16px;
   font-weight: 500;
   font-size: 12px;
-  color: #000000;
+  color: #595959;
   letter-spacing: 0;
   line-height: 25px;
   grid-column: 2 / 3;
@@ -382,16 +375,20 @@ footer {
   grid-row : 1 / 2;
 }
 
+#cart-total{
+  display:flex;
+  margin-top: 29px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
 #cart-total-text, #cart-total-sum{
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: #595959;
   letter-spacing: 0;
   text-align: center;
-}
-
-#cart-total{
-  display:flex;
+  margin: 0;
 }
 
 #checkout-button{
