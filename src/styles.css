@@ -123,7 +123,6 @@ button:focus {
   z-index: 0;
 }
 
-
 #slider{
   overflow: auto;
   position: relative;
@@ -478,8 +477,8 @@ footer {
   margin-top: 29px;
   margin-bottom: 30px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 #cart-total-text, #cart-total-sum{
@@ -520,7 +519,7 @@ footer {
 /***************************************************************************************************************************/
 /***************************************************************************************************************************/
   
-@media only screen and (min-width: 480px){
+@media only screen and (min-width: 490px){
   #header {
     grid-template-columns: 1fr 200px auto;
     grid-template-rows: 70px;
@@ -565,7 +564,6 @@ footer {
   #current-page {
     border-top: 1px solid #F5F5F5;
     padding-top: 20px;
-    padding-bottom: 20px;
   }
 
   #current-page:after{
@@ -644,6 +642,24 @@ footer {
   }
 }
 
+@media only screen and (min-width: 490px) and (max-width: 541px){
+  .add-cart-button {
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (min-width: 542px) and (max-width: 600px){
+  .add-cart-button {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 750px){
+  .add-cart-button {
+    margin-top: 30px;
+  }
+}
+
 /***************************************************************************************************************************/
 /***************************************************************************************************************************/
 /* MEDIAQUERY - IPAD/DESKTOP */
@@ -673,6 +689,10 @@ footer {
 
   #main {
     grid-template-columns: 100%;
+  }
+
+  #current-page {
+    padding-bottom: 10px;
   }
 
   .item-wrapper{
