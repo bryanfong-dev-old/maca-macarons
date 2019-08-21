@@ -5,7 +5,6 @@ import Body from '../components/Body';
 import Product from '../components/Product';
 import Footer from '../components/Footer';
 import CartContainer from './CartContainer';
-// import Images from '../Images';
 
 
 class MainContainer extends React.Component {
@@ -55,7 +54,6 @@ class MainContainer extends React.Component {
         price={price}
         type={type}
         text={text}
-        // img={Images[i]}
         addToCart={this.addToCart}
       />);
     }
