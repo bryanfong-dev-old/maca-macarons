@@ -34,8 +34,12 @@ button:focus {
 }
 
 #header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 70px 61px;
@@ -47,6 +51,8 @@ button:focus {
 }
 
 #cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
   margin-right: 20px;
@@ -126,14 +132,19 @@ button:focus {
   height: 3px;
   width: 100%;
   top: -3;
+  -webkit-transition: -webkit-transform .75s ease;
+  transition: -webkit-transform .75s ease;
   transition: transform .75s ease;
+  transition: transform .75s ease, -webkit-transform .75s ease;
 }
 
 .nav-item:nth-child(2):hover ~ #slider{
+  -webkit-transform: translate(100%);
   transform: translate(100%);
 }
 
 .nav-item:nth-child(3):hover ~ #slider{
+  -webkit-transform: translate(200%);
   transform: translate(200%);
 }
 
@@ -148,6 +159,7 @@ button:focus {
 .item-wrapper{
   margin: 20px;
   background: #FFFFFF;
+  -webkit-box-shadow: 0 3px 6px 0 #E5E5E5;
   box-shadow: 0 3px 6px 0 #E5E5E5;
   border-radius: 4px;
   display: grid;
@@ -239,6 +251,7 @@ button:focus {
 
 footer {
   background: #FAF9F7;
+  -webkit-box-shadow: 0 -1px 0 0 #F5F5F5;
   box-shadow: 0 -1px 0 0 #F5F5F5;
   margin-top: 40px;
 }
@@ -330,6 +343,7 @@ footer {
   width: 302px;
   height: 100%;
   background: #FFFFFF;
+  -webkit-box-shadow: 0 0 16px 0 rgba(0,0,0,0.10);
   box-shadow: 0 0 16px 0 rgba(0,0,0,0.10);
   border-radius: 2px;
   z-index : 1;
@@ -458,10 +472,14 @@ footer {
 }
 
 #cart-total{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   margin-top: 29px;
   margin-bottom: 30px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #cart-total-text, #cart-total-sum{
@@ -664,6 +682,7 @@ footer {
     grid-column-gap: 20px;
     height: 180px;
     margin: 1px 40px;
+    -webkit-box-shadow: none;
     box-shadow: none;
     border-bottom: 1px solid #F3F0EB;
   }
