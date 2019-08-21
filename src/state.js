@@ -24,6 +24,6 @@ export const state = {
     1: 0,
     2: 0,
   },
-  cartView: false,
+  cartView: 'inital',
   cartCount: 0,
 }
