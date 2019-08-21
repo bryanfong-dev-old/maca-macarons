@@ -7,11 +7,14 @@
     "node": "10.15.3"
   },
   "scripts": {
-    "start": "parcel index.html",
+    "start": "node server/server.js",
+    "dev": "parcel index.html",
     "build": "parcel build index.html"
   },
   "license": "MIT",
   "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "react": "^16.8.1",
     "react-dom": "^16.9.0"
   },
