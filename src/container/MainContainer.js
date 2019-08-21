@@ -70,7 +70,7 @@ class MainContainer extends React.Component {
         {cartView == 'open' && <CartContainer
           images={Images} cart={cart} items={items} status="cart-slider-open"
           removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
-        {!cartView == 'close' && <CartContainer
+        {cartView == 'close' && <CartContainer
           images={Images} cart={cart} items={items} status="cart-slider-close"
           removeFromCart={this.removeFromCart} closeCart={this.closeCart} />}
       </div >
