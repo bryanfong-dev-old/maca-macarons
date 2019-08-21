@@ -7,8 +7,6 @@ import Footer from '../components/Footer';
 import CartContainer from './CartContainer';
 import Images from '../Images';
 
-// const Images = ['', '', '']
-
 
 class MainContainer extends React.Component {
   constructor(props) {
