@@ -55,7 +55,7 @@ class MainContainer extends React.Component {
         price={price}
         type={type}
         text={text}
-        img={Images[i]}
+        // img={Images[i]}
         addToCart={this.addToCart}
       />);
     }

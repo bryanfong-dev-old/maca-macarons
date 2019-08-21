@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product = ({ name, price, type, text, img, addToCart, i }) => (
+const Product = ({ name, price, type, text, addToCart, i }) => (
   <section className="item-wrapper">
     <div className="cart-price-wrapper"></div>
     {/* <div className="item-photo" style={{ backgroundImage: `url('${img}')` }} /> */}
