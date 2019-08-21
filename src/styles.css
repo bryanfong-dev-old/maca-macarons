@@ -126,6 +126,7 @@ button:focus {
   height: 3px;
   width: 100%;
   top: -3;
+  transition: transform .75s ease;
 }
 
 .nav-item:nth-child(2):hover ~ #slider{
