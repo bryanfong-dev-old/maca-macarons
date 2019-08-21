@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import CartContainer from './CartContainer';
 // import Images from '../Images';
 
-const Images = ['', '', '']
+const Images = ['./assets/images/custom gift box@2x.png', '', '']
 
 
 class MainContainer extends React.Component {
